@@ -5,37 +5,48 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
 const Compression = require("compression-webpack-plugin");
+const Analyze = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const UglifyPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: {
-    mainPage: "./src/index.js",
+    mainPage: "./src/index.js"
   },
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "[name].[contenthash].bundle.js",
+    filename: "[name].[contenthash].bundle.js"
   },
   module: {
     rules: [
       {
         test: /\.vue$/,
         loader: "vue-loader",
+        options: {
+          loaders: {
+            js: [{ loader: "babel-loader", options: {presets: ["env"]} }]
+          }
+        }
       },
       {
         test: /\.css$/,
-        loader: [MiniCssExtractPlugin.loader, "css-loader"],
+        loader: [MiniCssExtractPlugin.loader, "css-loader"]
       },
       {
-        test: /\.scss/,
-        loader: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        test: /\.scss$/,
+        loader: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
       },
       {
         test: /\.(png|jpe?g|gif|webp)$/i,
         loader: "file-loader",
         options: {
-          name: "assets/[name].[contenthash].asset.[ext]",
-        },
+          name: "assets/[name].[contenthash].asset.[ext]"
+        }
       },
-    ],
+      {
+        test: /\.js$/,
+        loader: "babel-loader"
+      }
+    ]
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -44,40 +55,45 @@ module.exports = {
       template: path.join(__dirname, "./src/html/index.html"),
       chunks: ["mainPage"],
       inject: "body",
-      filename: "index.html",
+      filename: "index.html"
     }),
     new MiniCssExtractPlugin(),
     new webpack.BannerPlugin({
       banner: "This file is used by Nicory Frontend",
       exclude: /\/node_modules\/(\d|\w)+/
     }),
-    new Compression()
+    new Compression(),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new Analyze(),
+    new UglifyPlugin()
   ],
   devServer: {
-    historyApiFallback: true,
+    historyApiFallback: true
   },
   optimization: {
-    runtimeChunk: 'single',
+    runtimeChunk: "single",
     splitChunks: {
-      chunks: 'all',
+      chunks: "all",
       maxInitialRequests: Infinity,
       minSize: 0,
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name(module) {
-            const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-            return `vendor/${packageName.replace('@', '')}`;
-          },
-        },
-      },
-    },
+            const packageName = module.context.match(
+              /[\\/]node_modules[\\/](.*?)([\\/]|$)/
+            )[1];
+            return `vendor/${packageName.replace("@", "")}`;
+          }
+        }
+      }
+    }
   },
   resolve: {
     alias: {
       vue$: "vue/dist/vue.esm.js",
-      "@": path.join(__dirname, "src"),
-    },
+      "@": path.join(__dirname, "src")
+    }
   },
   devtool: "inline-source-map"
 };
