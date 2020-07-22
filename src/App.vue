@@ -1,16 +1,13 @@
 <template>
   <div class="NicoryApp">
     <Header />
-        <transition
-          name="fade"
-          mode="out-in"
-          @beforeLeave="beforeLeave"
-          @enter="enter"
-          @afterEnter="afterEnter"
-        >
-         <router-view/>
-       </transition>
-    <Footer />
+    <div class="some-random-element">
+      <transition name="fade" mode="out-in">
+        <router-view/>
+      </transition>
+      <Footer />
+    </div>
+
   </div>
 </template>
 
@@ -36,5 +33,12 @@ export default {
 .fade-enter,
 .fade-leave-active {
   opacity: 0
+}
+
+.some-random-element{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 </style>

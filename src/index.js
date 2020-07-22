@@ -12,6 +12,7 @@ import App from '@/App.vue'
 // views
 const MainPage = () => import(/* webpackChunkName: "MainPage" */ "@/views/MainPage.vue");
 const NotFound = () => import(/* webpackChunkName: "NotFound" */ "@/views/NotFound.vue");
+const Commands = () => import(/* webpackChunkName: "Commands" */ "@/views/Commands.vue");
 
 // plugins
 import '@/plugins/discord'
@@ -37,6 +38,10 @@ const router = new VueRouter({
     {
       path: "*",
       component: NotFound
+    },
+    {
+      path: "/commands",
+      component: Commands
     }
   ],
   mode: "history"
