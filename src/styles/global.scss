@@ -43,4 +43,16 @@ html,
 $main: #a4508b;
 $secondary: #5f0a87;
 
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity, height;
+  transition-timing-function: ease;
+  overflow: hidden;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
 

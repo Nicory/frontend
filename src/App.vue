@@ -22,19 +22,6 @@ export default {
 </script>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition-duration: 0.3s;
-  transition-property: opacity, height;
-  transition-timing-function: ease;
-  overflow: hidden;
-}
-
-.fade-enter,
-.fade-leave-active {
-  opacity: 0
-}
-
 .some-random-element{
   display: flex;
   flex-direction: column;
