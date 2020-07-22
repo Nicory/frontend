@@ -25,7 +25,7 @@
               <td>{{command.description}}</td>
               <td>{{command.usage}}</td>
               <td>{{command.cooldown || 0}}сек.</td>
-              <td>{{command.aliases.join(" ")}}</td>
+              <td>{{command.aliases.join(", ")}}</td>
             </tr>
           </template>
         </tbody>
