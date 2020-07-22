@@ -14,7 +14,6 @@ const MainPage = () => import(/* webpackChunkName: "MainPage" */ "@/views/MainPa
 const NotFound = () => import(/* webpackChunkName: "NotFound" */ "@/views/NotFound.vue");
 
 // plugins
-import '@/plugins/material'
 import '@/plugins/discord'
 import '@/plugins/aos'
 
@@ -22,6 +21,12 @@ import '@/plugins/aos'
 import "@/styles/global.scss";
 
 // etc
+import M from 'materialize-css'
+document.addEventListener("DOMContentLoaded", function() {
+  let elems = document.querySelectorAll(".sidenav");
+  let instances = M.Sidenav.init(elems);
+});
+
 import store from "@/store"
 const router = new VueRouter({
   routes: [

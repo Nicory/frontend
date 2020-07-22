@@ -13,7 +13,7 @@
             <p class="feature__description">В NicoryBot есть инструментарий для удобного управления вашим сервером: начиная от команд !!ban до системы логирования действий участников и автомодерации!</p>
           </div>
           <discord-messages class="feature__messages" data-aos="fade-left">
-            <discord-message author="Кислый" avatar="https://images-ext-1.discordapp.net/external/92X_clEKZC7PqTThe6bwFxfvvVy6IULWJXDyonwn4MA/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/419524085736013834/a_e69eeb8e71861bdb57a8371559c35103.gif">!!ban <mention>Neros2k</mention> очень плохой человек!</discord-message>
+            <discord-message author="Кислый" avatar="https://images-ext-2.discordapp.net/external/iCyCVHxHH59zs0ghmpjEhj3mbFS1LIAPINu_jTMtNpw/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/419524085736013834/b6c7b4d48509b8eb7d32e976fc78734d.webp?width=660&height=660">!!ban <mention>Neros2k</mention> очень плохой человек!</discord-message>
             <discord-message author="NicoryBot" bot avatar="https://images-ext-1.discordapp.net/external/6LeI7eVH02fXrSnMRYy2gZT4IIwURAvpmFVBrgfNis0/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/706600733931339806/b414b516bcf79c9e03a74e10cbd0ceb2.webp?width=660&height=660">Пользователь <mention>Neros2k</mention> успешно забанен по причине: <code>очень плохой человек!</code></discord-message>
           </discord-messages>
         </div>
@@ -33,7 +33,7 @@
             <p class="feature__description">Наконец-то была добавлена панель управления на сайта, с помощу которой вам не нужно будет 10 часов разбиратся в командах!</p>
           </div>
           <discord-messages class="feature__messages" data-aos="fade-left">
-            <discord-message author="Сладкий" avatar="https://images-ext-1.discordapp.net/external/92X_clEKZC7PqTThe6bwFxfvvVy6IULWJXDyonwn4MA/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/419524085736013834/a_e69eeb8e71861bdb57a8371559c35103.gif">!!control</discord-message>
+            <discord-message author="Сладкий" avatar="https://images-ext-2.discordapp.net/external/iCyCVHxHH59zs0ghmpjEhj3mbFS1LIAPINu_jTMtNpw/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/419524085736013834/b6c7b4d48509b8eb7d32e976fc78734d.webp?width=660&height=660">!!control</discord-message>
             <discord-message author="NicoryBot" bot avatar="https://images-ext-1.discordapp.net/external/6LeI7eVH02fXrSnMRYy2gZT4IIwURAvpmFVBrgfNis0/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/706600733931339806/b414b516bcf79c9e03a74e10cbd0ceb2.webp?width=660&height=660">Ваш токен доступа для вебпанели(https://nicory.xyz/dashboard): <code>{{random}}</code></discord-message>
           </discord-messages>
         </div>
@@ -53,6 +53,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -101,6 +102,7 @@ export default {
     font-size: 1.5rem;
     line-height: 1.5rem;
     font-weight: 200;
+    opacity: 0.7;
   }
 
   &__messages{
@@ -149,6 +151,7 @@ export default {
     margin-top: 60px;
     font-size: 4rem;
     grid-row-start: 2;
+    color: white;
   }
 }
 </style>

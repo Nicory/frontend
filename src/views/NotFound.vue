@@ -1,9 +1,9 @@
 <template>
   <div class="NotFound">
     <div class="container">
-      <div class="e404 md-display-4">404</div>
-      <h1 class="phrase glitch">{{phrase}}</h1>
-    </div>  
+      <div class="e404">404</div>
+      <h5 class="phrase glitch">{{phrase}}</h5>
+    </div>
   </div>
 </template>
 <style scoped lang="scss">
@@ -15,6 +15,8 @@
 .e404{
   color: gray;
   font-weight: 900;
+  font-size: 5rem;
+  letter-spacing: 20px;
 }
 
 .phrase{
@@ -58,7 +60,7 @@ export default {
       'Кислый наелся, спит и не фиксит эти баги',
       "Упс... Похоже, Вы попали в пространство 404",
       "Что...? Где мы?",
-      "Тут кто нибудь есть?", 
+      "Тут кто нибудь есть?",
       "Сервер спит, приходите попозже",
       "Кажется, вы ошиблись порталом...",
       "Эй! Тебя здесь быть не должно!",

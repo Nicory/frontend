@@ -4,13 +4,11 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
-const Compression = require("compression-webpack-plugin");
-const Analyze = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-const UglifyPlugin = require('uglifyjs-webpack-plugin');
+const DotenvWebpackPlugin = require("dotenv-webpack");
 
 module.exports = {
   entry: {
-    mainPage: "./src/index.js"
+    common: "./src/index.js"
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -23,7 +21,7 @@ module.exports = {
         loader: "vue-loader",
         options: {
           loaders: {
-            js: [{ loader: "babel-loader", options: {presets: ["env"]} }]
+            js: [{ loader: "babel-loader", options: { presets: ["env"] } }]
           }
         }
       },
@@ -53,19 +51,13 @@ module.exports = {
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "./src/html/index.html"),
-      chunks: ["mainPage"],
+      chunks: ["common"],
       inject: "body",
       filename: "index.html"
     }),
     new MiniCssExtractPlugin(),
-    new webpack.BannerPlugin({
-      banner: "This file is used by Nicory Frontend",
-      exclude: /\/node_modules\/(\d|\w)+/
-    }),
-    new Compression(),
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new Analyze(),
-    new UglifyPlugin()
+    new DotenvWebpackPlugin()
   ],
   devServer: {
     historyApiFallback: true
