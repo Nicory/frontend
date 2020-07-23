@@ -4,15 +4,21 @@ export default {
     authed: false
   }),
   mutations: {
-    setToken(state, token) { 
+    setToken(state, token) {
       state.token = token;
       state.authed = true;
     }
   },
   actions: {
-    login(ctx, token = window.localStorage.getItem("token")) {
-      // todo: setToken only after validation
-      if (window.localStorage.getItem("token")) { 
+    async login(ctx, token = window.localStorage.getItem("token")) {
+      const resp = await fetch(`${process.env.API_HOST}/public/auth/${token}`);
+      if (resp.status == 401) {
+        ctx.state.token = null;
+        ctx.state.authed = false;
+        return
+      }
+
+      if (window.localStorage.getItem("token")) {
         return ctx.commit("setToken", token);
       }
       ctx.commit("setToken", token);

@@ -43,6 +43,10 @@ html,
 $main: #a4508b;
 $secondary: #5f0a87;
 
+::selection{
+  background: $main;
+}
+
 
 .fade-enter-active, .fade-leave-active {
   transition-duration: 0.3s;

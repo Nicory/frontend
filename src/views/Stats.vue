@@ -78,6 +78,8 @@ export default {
   justify-content: space-between;
   align-items: center;
   width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 
   &__text-content{
     text-align: right;
