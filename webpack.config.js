@@ -12,7 +12,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "[name].[contenthash].bundle.js"
+    filename: "js/[name].[contenthash].bundle.js"
   },
   module: {
     rules: [
@@ -55,12 +55,16 @@ module.exports = {
       inject: "body",
       filename: "index.html"
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "css/[contenthash].[name].[id].css",
+      chunkFilename: "css/[contenthash].[name].[id].css"
+    }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new DotenvWebpackPlugin()
   ],
   devServer: {
-    historyApiFallback: true
+    historyApiFallback: true,
+    hot: true
   },
   optimization: {
     runtimeChunk: "single",
