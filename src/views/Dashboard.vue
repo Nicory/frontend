@@ -36,12 +36,14 @@ export default {
       await this.$store.dispatch("login", this.token);
       const api = new NicoryApi(this.$store.getters.token);
       this.guildData = await api.getGuildInfo();
+      this.$store.commit("setData", this.guildData);
     }
   },
   async mounted(){
     await this.$store.dispatch("login");
     const api = new NicoryApi(this.$store.getters.token);
     this.guildData = await api.getGuildInfo();
+    this.$store.commit("setData", this.guildData);
   }
 }
 </script>
@@ -67,12 +69,15 @@ export default {
 .Dashboard{
   margin-top: 50px;
   justify-content: center;
+  display: flex;
   align-items: center;
   margin-bottom: 30px;
   height: 100%;
 }
 
 .auth-form{
+  margin-top: auto;
+  margin-bottom: auto;
   &__title{
     text-align: center;
   }

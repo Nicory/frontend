@@ -5,6 +5,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
 const DotenvWebpackPlugin = require("dotenv-webpack");
+const BundleAnalyzer = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
   entry: {
@@ -60,7 +61,8 @@ module.exports = {
       chunkFilename: "css/[contenthash].[name].[id].css"
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new DotenvWebpackPlugin()
+    new DotenvWebpackPlugin(),
+    new BundleAnalyzer()
   ],
   devServer: {
     historyApiFallback: true,
@@ -68,6 +70,7 @@ module.exports = {
   },
   optimization: {
     runtimeChunk: "single",
+    usedExports: true,
     splitChunks: {
       chunks: "all",
       maxInitialRequests: Infinity,
