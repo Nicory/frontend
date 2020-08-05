@@ -14,13 +14,13 @@
           </div>
           <discord-messages class="feature__messages" data-aos="fade-left">
             <discord-message author="Кислый" avatar="https://images-ext-2.discordapp.net/external/iCyCVHxHH59zs0ghmpjEhj3mbFS1LIAPINu_jTMtNpw/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/419524085736013834/b6c7b4d48509b8eb7d32e976fc78734d.webp?width=660&height=660">!!ban <mention>Neros2k</mention> очень плохой человек!</discord-message>
-            <discord-message author="NicoryBot" bot avatar="https://images-ext-1.discordapp.net/external/6LeI7eVH02fXrSnMRYy2gZT4IIwURAvpmFVBrgfNis0/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/706600733931339806/b414b516bcf79c9e03a74e10cbd0ceb2.webp?width=660&height=660">Пользователь <mention>Neros2k</mention> успешно забанен по причине: <code>очень плохой человек!</code></discord-message>
+            <discord-message author="NicoryBot" bot avatar="https://images-ext-1.discordapp.net/external/FE137AloQDpKjc_qyOa0EQW3dLPX9ZZCneYnT2XBPSw/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/706600733931339806/faa160f99be3d44323247c5d49621b96.webp?width=684&height=684">Пользователь <mention>Neros2k</mention> успешно забанен по причине: <code>очень плохой человек!</code></discord-message>
           </discord-messages>
         </div>
         <div class="feature">
           <discord-messages class="feature__messages" data-aos="fade-right">
-            <discord-message author="NeloExt3" avatar="https://images-ext-2.discordapp.net/external/ZzvJOjxU3GzIGm4H7wW2qb5gq9_conduqPMQAGHPNvk/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/622747295435456512/a_a89ab431f88e458f51c4cd5fcf62bebf.gif">!!moder <mention></mention></discord-message>
-            <discord-message author="NicoryBot" bot avatar="https://images-ext-1.discordapp.net/external/6LeI7eVH02fXrSnMRYy2gZT4IIwURAvpmFVBrgfNis0/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/706600733931339806/b414b516bcf79c9e03a74e10cbd0ceb2.webp?width=660&height=660"><mention></mention> получил модера по желанию <mention>NeloExt3</mention> с помощью кастомной команды!</discord-message>
+            <discord-message author="EnotKEK3" avatar="https://images-ext-1.discordapp.net/external/rZplXE9-4OxjJxLO9tCgl7htp7gm6gQfDT_o43tozN8/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/622747295435456512/a_1ef78a82502945337fd04fc6853e32e2.gif">!!moder <mention></mention></discord-message>
+            <discord-message author="NicoryBot" bot avatar="https://images-ext-1.discordapp.net/external/FE137AloQDpKjc_qyOa0EQW3dLPX9ZZCneYnT2XBPSw/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/706600733931339806/faa160f99be3d44323247c5d49621b96.webp?width=684&height=684"><mention></mention> получил модера по желанию <mention>EnotKEK3</mention> с помощью кастомной команды!</discord-message>
           </discord-messages>
           <div class="feature__text-wrapper tar" data-aos="fade-left">
             <h1 class="feature__title">Кастомные команды</h1>
@@ -34,15 +34,15 @@
           </div>
           <discord-messages class="feature__messages" data-aos="fade-left">
             <discord-message author="Сладкий" avatar="https://images-ext-2.discordapp.net/external/iCyCVHxHH59zs0ghmpjEhj3mbFS1LIAPINu_jTMtNpw/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/419524085736013834/b6c7b4d48509b8eb7d32e976fc78734d.webp?width=660&height=660">!!control</discord-message>
-            <discord-message author="NicoryBot" bot avatar="https://images-ext-1.discordapp.net/external/6LeI7eVH02fXrSnMRYy2gZT4IIwURAvpmFVBrgfNis0/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/706600733931339806/b414b516bcf79c9e03a74e10cbd0ceb2.webp?width=660&height=660">Ваш токен доступа для вебпанели(https://nicory.xyz/dashboard): <code>{{random}}</code></discord-message>
+            <discord-message author="NicoryBot" bot avatar="https://images-ext-1.discordapp.net/external/FE137AloQDpKjc_qyOa0EQW3dLPX9ZZCneYnT2XBPSw/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/706600733931339806/faa160f99be3d44323247c5d49621b96.webp?width=684&height=684">Ваш токен доступа для вебпанели(https://nicory.xyz/dashboard): <code>{{random}}</code></discord-message>
           </discord-messages>
         </div>
         <div class="feature">
           <discord-messages class="feature__messages" data-aos="fade-right">
-            <discord-message author="NeloExt3" avatar="https://images-ext-2.discordapp.net/external/ZzvJOjxU3GzIGm4H7wW2qb5gq9_conduqPMQAGHPNvk/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/622747295435456512/a_a89ab431f88e458f51c4cd5fcf62bebf.gif">!!work кодер</discord-message>
-            <discord-message author="NicoryBot" bot avatar="https://images-ext-1.discordapp.net/external/6LeI7eVH02fXrSnMRYy2gZT4IIwURAvpmFVBrgfNis0/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/706600733931339806/b414b516bcf79c9e03a74e10cbd0ceb2.webp?width=660&height=660">
+            <discord-message author="EnotKEK3" avatar="https://images-ext-1.discordapp.net/external/rZplXE9-4OxjJxLO9tCgl7htp7gm6gQfDT_o43tozN8/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/622747295435456512/a_1ef78a82502945337fd04fc6853e32e2.gif">!!work кодер</discord-message>
+            <discord-message author="NicoryBot" bot avatar="https://images-ext-1.discordapp.net/external/FE137AloQDpKjc_qyOa0EQW3dLPX9ZZCneYnT2XBPSw/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/706600733931339806/faa160f99be3d44323247c5d49621b96.webp?width=684&height=684">
               <discord-embed>
-                <mention>NeloExt3</mention> работает на работе кодер и получает {{randomCash}} кредитов!
+                <mention>EnotKEK3</mention> работает на работе кодер и получает {{randomCash}} кредитов!
               </discord-embed>
             </discord-message>
           </discord-messages>

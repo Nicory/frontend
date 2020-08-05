@@ -3,7 +3,7 @@
     <div class="footer__content container">
       <div class="footer__block">
         <h4>NicoryBot</h4>
-        <h6>By KislBall and NeloExt3</h6>
+        <h6>By KislBall and EnotKEK3</h6>
       </div>
       <div class="footer__block footer__icon waves-effect">
         <i class="meduim material-icons">favorite</i>
