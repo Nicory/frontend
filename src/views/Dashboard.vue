@@ -19,6 +19,7 @@
         </div>
 
       </div>
+      <h1 class="wip">Work in progress...</h1>
     </div>
   </div>
 </template>
@@ -64,6 +65,7 @@ export default {
 
 .control-panel{
   align-self: flex-start;
+  width: 100%;
 }
 
 .Dashboard{
@@ -73,6 +75,10 @@ export default {
   align-items: center;
   margin-bottom: 30px;
   height: 100%;
+}
+
+.wip{
+  text-align: center;
 }
 
 .auth-form{
