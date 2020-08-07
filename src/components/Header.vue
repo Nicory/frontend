@@ -9,6 +9,7 @@
           <li><router-link class="waves-effect waves-light" to="/commands">Команды</router-link></li>
           <li><router-link class="waves-effect waves-light" to="/stats">Статистика</router-link></li>
           <li><router-link class="waves-effect waves-light" to="/dashboard">Панель управления</router-link></li>
+          <li><a class="waves-effect waves-light" href="https://discord.com/api/oauth2/authorize?client_id=706600733931339806&permissions=8&scope=bot">Пригласить</a></li>
         </ul>
       </div>
     </nav>
@@ -18,6 +19,7 @@
       <li><a href="/commands">Команды</a></li>
       <li><a href="/stats">Статистика</a></li>
       <li><a href="/dashboard">Панель управления</a></li>
+      <li><a class="waves-effect waves-light" href="https://discord.com/api/oauth2/authorize?client_id=706600733931339806&permissions=8&scope=bot">Пригласить</a></li>
     </ul>
   </div>
 </template>
