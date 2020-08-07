@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
 const DotenvWebpackPlugin = require("dotenv-webpack");
 const BundleAnalyzer = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -35,13 +36,6 @@ module.exports = {
         loader: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
       },
       {
-        test: /\.(png|jpe?g|gif|webp)$/i,
-        loader: "file-loader",
-        options: {
-          name: "assets/[name].[contenthash].asset.[ext]"
-        }
-      },
-      {
         test: /\.js$/,
         loader: "babel-loader"
       }
@@ -62,7 +56,12 @@ module.exports = {
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new DotenvWebpackPlugin(),
-    new BundleAnalyzer()
+    new BundleAnalyzer(),
+    new CopyWebpackPlugin({
+      patterns: [
+        {from: "./src/static"}
+      ]
+    })
   ],
   devServer: {
     historyApiFallback: true,

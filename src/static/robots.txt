@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /commands
+Allow: /
+Allow: /stats
+Disallow: /dashboard
